@@ -61,12 +61,12 @@ kinit Administrator@DOMAIN.NAME
 
 ## Step 4: Copying the certificate to the Anisble host
 To connect with https, we will need to add our CA to our trust store
--- On the windows server with CA, open the CA panel
--- Right click on your CA server name and open the properties menu
--- Select Certificate #0 and click view certificate
--- Open the details tab and select copy to file
--- Select DER .CER and export the file, here I used caCert.cer
--- Copy the file to your Ansible host, I used scp but you can use a shared folder or other method
+- On the windows server with CA, open the CA panel
+- Right click on your CA server name and open the properties menu
+- Select Certificate #0 and click view certificate
+- Open the details tab and select copy to file
+- Select DER .CER and export the file, here I used caCert.cer
+- Copy the file to your Ansible host, I used scp but you can use a shared folder or other method
 
 ## Step 5: Converting from DER to PEM
 In order for openssl to read the certificate, we need to convert it
